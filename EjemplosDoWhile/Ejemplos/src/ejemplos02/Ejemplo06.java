@@ -32,12 +32,20 @@ public class Ejemplo06 {
         int operacion;
         int contador = 1;
         int limite;
+        String cadena = "";
+        
+        System.out.println("Ingrese el numero de la tabla");
+        tabla = entrada.nextInt();
+        System.out.println("Ingrese el limite por teclado");
+        limite = entrada.nextInt();
         
         do {
             operacion = tabla * contador;
-            System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
-            contador = contador + 1;
+            cadena = String.format("" + tabla + contador + "=" + operacion + "\n"); 
+           //System.out.printf("%d x %d = %d\n", tabla, contador, operacion);
+           //contador = contador + 1;
         } while (contador <= limite);
-
+        
+        System.out.printf("%s", cadena);
     }
 }
